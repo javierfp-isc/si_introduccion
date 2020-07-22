@@ -2,7 +2,7 @@
 
 ## Objetivo
 
-En esta práctica se va a desplegar un escenario en docker para realizar ejercicios de redes
+En esta práctica se va a desplegar un escenario en docker para realizar ejercicios de introducción de sistemas operativos
 
 ## Pasos previos a realizar
 
@@ -16,10 +16,7 @@ El escenario es el conjunto de elementos necesarios para la realización de la p
 
 En este repositorio disponemos de los escenarios:
 
-- **redes_configurar**: escenario para configuración básica de red 
-- **redes_laboratorio**: creación del escenario de las prácticas de redes
-- **redes_direccionamiento**: escenario para la tarea de direccionamiento 
-- **redes_enrutamiento**: escenario para la tarea de enrutamiento 
+- **intro_procmem**: escenario para ejercicios de gestión de cpu y memoria
 
 ### Creación del escenario de la práctica
 

@@ -1,0 +1,7 @@
+version: '3'
+services:
+#Service sa toma el Dockerfile de ./laboratorio
+ intro1:
+  build: ./laboratorio
+  hostname: intro1
+  privileged: true

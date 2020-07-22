@@ -7,8 +7,8 @@ ENV PASS=abc123.
 ENV PATH /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/sbin
 
 LABEL distribucion="Debian 10"
-LABEL descripcion="Imagen Debian para prácticas de redes"
-LABEL paquetes="vim, iputils-ping, nano, iptables, traceroute ifupdown"
+LABEL descripcion="Imagen Debian para prácticas de introducción"
+LABEL paquetes="vim, iputils-ping, nano, procps"
 LABEL acceso="usuario: root, password: abc123."
 
 #Copiamos el entrypoint.sh al container
@@ -24,7 +24,7 @@ RUN set -x; \
 
 #Instalamos paquetes de utilidades
 RUN set -x; \
-	apt update && apt install -y vim iputils-ping nano iptables traceroute ifupdown
+	apt update && apt install -y vim iputils-ping nano procps
 
 #Limpiando
 RUN set -x; \
