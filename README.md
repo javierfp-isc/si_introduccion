@@ -1,4 +1,4 @@
-# Entorno para prácticas de configuración de redes
+# Entorno para prácticas de introducción a sistemas operativos
 
 ## Objetivo
 
