@@ -1,0 +1,7 @@
+version: '3'
+services:
+#Service sa toma el Dockerfile de ./laboratorio
+ intarea:
+  build: ./laboratorio
+  hostname: intarea
+  privileged: true

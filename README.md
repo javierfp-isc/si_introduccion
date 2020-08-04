@@ -17,6 +17,7 @@ El escenario es el conjunto de elementos necesarios para la realización de la p
 En este repositorio disponemos de los escenarios:
 
 - **intro_procmem**: escenario para ejercicios de gestión de cpu y memoria
+- **intro_commands**: escenario para la tarea de gestión de cpu y memoria
 
 ### Creación del escenario de la práctica
 
