@@ -18,6 +18,7 @@ En este repositorio disponemos de los escenarios:
 
 - **intro_procmem**: escenario para ejercicios de gestión de cpu y memoria
 - **intro_commands**: escenario para la tarea de gestión de cpu y memoria
+- **intro_entorno**: escenario para la trabajo con elementos de entorno, tales como escritorios
 
 ### Creación del escenario de la práctica
 
