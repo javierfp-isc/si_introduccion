@@ -5,3 +5,5 @@ services:
   build: ./laboratorio
   hostname: entorno1
   privileged: true
+  ports:
+  - "3389:3389"
