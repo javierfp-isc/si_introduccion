@@ -57,6 +57,8 @@ Como plataforma de ejecución para las prácticas usaremos docker, por tanto lo 
 *  En los pasos de la instalación anterior si el comando sudo os da problemas es porque en Debian por defecto no viene instalado. En ese caso eliminad la instrucción sudo de los comandos y ejecutad todo con el usuario root.
 *  Una vez finalizada la instalación para poder ejecutar docker engine con un usuario no root, por ejemplo vuestro usuario normal de escritorio, ejecutad el comando siguiente con ese usuario, es decir desde una sesión de terminal del usuario (no de root):
 
+#### Añadir usuario no root al grupo
+
 `usermod -aG docker $USER `
 
 * El comando anterior añade al usuario al grupo docker, con esto podremos ejecutar docker con nuestro usuario de trabajo normal, sin necesidad de autenticarnos con usuario root. A continuación para aplicar los cambios del grupo ejecutamos:
@@ -66,7 +68,12 @@ Como plataforma de ejecución para las prácticas usaremos docker, por tanto lo 
 ### Instalación de docker compose
 
 **docker compose** es una herramienta de **despliegue de containers docker**. Se basa en un fichero declarativo en formato YAML (YAML Aint Markup Language) en el que se indica el entorno de despliegue de los container, es decir, en nuestro caso el escenario de la práctica.
-Para instalar docker-compose en Debian ejecutamos los pasos
+Para instalar docker-compose en Debian ejecutamos los pasos:
+
+`curl -L "https://github.com/docker/compose/releases/download/1.27.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose`
+`chmod +x /usr/local/bin/docker-compose`
+
+La referencia de instalación en la documentación oficial:
 
 [Instalación de docker-compose en Debian](https://docs.docker.com/compose/install/#install-compose-on-linux-systems)
 
