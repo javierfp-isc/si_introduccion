@@ -49,7 +49,29 @@ Una vez termine el comando dispondremos en un directorio que por defecto tendrá
 
 ### Instalación de docker engine
 
-Como plataforma de ejecución para las prácticas usaremos docker, por tanto lo primero que necesitamos es docker engine funcionando en nuestro sistema. Podemos instalar docker engine en cualquier distribución de GNU/Linux, MacOS e incluso Windows (aunque en este caso sobre una máquina virtual). Para instalar docker engine en Debian seguimos los pasos indicados en:
+Como plataforma de ejecución para las prácticas usaremos docker, por tanto lo primero que necesitamos es docker engine funcionando en nuestro sistema. Podemos instalar docker engine en cualquier distribución de GNU/Linux, MacOS e incluso Windows (aunque en este caso sobre una máquina virtual). Para instalar docker engine en Debian seguimos los pasos siguientes:
+
+#### Instalación de dependencias
+
+`apt install -y apt-transport-https ca-certificates curl gnupg-agent software-properties-common`
+
+#### Añadir repositorio
+
+Primero añadimos la clave del repositorio:
+
+`curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add -`
+
+A continuación añadimos el repositorio:
+
+`add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable"`
+
+#### Actualizamos e instalamos docker-engine
+
+`apt update`
+
+`apt install -y docker-ce docker-ce-cli containerd.io`
+
+La referencia para la instalación en la documentación oficial:
 
 [Instalación de docker engine en Debian](https://docs.docker.com/engine/install/debian/#install-using-the-repository)
 
