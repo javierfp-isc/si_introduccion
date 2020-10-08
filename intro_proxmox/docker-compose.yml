@@ -1,0 +1,42 @@
+version: '3'
+services:
+#Service sa toma el Dockerfile de ./laboratorio
+ proxmox1:
+  build: ./proxmox
+  hostname: proxmox1
+  privileged: true
+  ports:
+  - "8016:8006"
+  networks:
+   proxmox:
+    ipv4_address: 192.168.199.10
+  volumes:
+  - /sys/fs/cgroup:/sys/fs/cgroup:ro
+ proxmox2:
+  build: ./proxmox
+  hostname: proxmox2
+  privileged: true
+  ports:
+  - "8026:8006"
+  networks:
+   proxmox:
+    ipv4_address: 192.168.199.20
+  volumes:
+  - /sys/fs/cgroup:/sys/fs/cgroup:ro
+ proxmox3:
+  build: ./proxmox
+  hostname: proxmox3
+  privileged: true
+  ports:
+  - "8036:8006"
+  networks:
+   proxmox:
+    ipv4_address: 192.168.199.30
+  volumes:
+  - /sys/fs/cgroup:/sys/fs/cgroup:ro
+networks:
+  proxmox:
+    driver: bridge
+    ipam:
+     config:
+       - subnet: 192.168.199.0/24
