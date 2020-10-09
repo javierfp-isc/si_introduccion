@@ -12,9 +12,12 @@ LABEL descripcion="Imagen Debian para proxmox"
 LABEL paquetes="vim, iputils-ping, nano, procps wget"
 LABEL acceso="usuario: root, password: abc123."
 
-#Añadimos la IP en el /etc/hosts
+#Copiamos el entrypoint.sh al container
+COPY entrypoint.sh /usr/bin/entrypoint.sh
+
+#Damos permiso al entrypoint y al script
 RUN set -x; \
-	echo "$(hostname --ip) $(hostname) $(hostname).local" >> /etc/hosts
+	chmod +x /usr/bin/entrypoint.sh
 
 #Establecemos la password de root
 RUN set -x; \
@@ -39,3 +42,6 @@ RUN set -x; \
 #Limpiando
 RUN set -x; \
 	apt clean
+
+#Comando para arrancar ssh y entrar en bucle de espera
+ENTRYPOINT ["/usr/bin/entrypoint.sh"]
