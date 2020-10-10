@@ -11,7 +11,7 @@ services:
   - IPADD=192.168.199.10
   networks:
    proxmox:
-#    ipv4_address: 192.168.199.10
+    ipv4_address: 192.168.199.10
   volumes:
   - /sys/fs/cgroup:/sys/fs/cgroup:ro
  proxmox2:
@@ -24,7 +24,7 @@ services:
   - IPADD=192.168.199.20
   networks:
    proxmox:
-#    ipv4_address: 192.168.199.20
+    ipv4_address: 192.168.199.20
   volumes:
   - /sys/fs/cgroup:/sys/fs/cgroup:ro
  proxmox3:
@@ -37,7 +37,7 @@ services:
   - IPADD=192.168.199.30
   networks:
    proxmox:
-#    ipv4_address: 192.168.199.30
+    ipv4_address: 192.168.199.30
   volumes:
   - /sys/fs/cgroup:/sys/fs/cgroup:ro
 networks:

@@ -1,0 +1,7 @@
+source-directory /etc/network/interfaces.d
+
+auto etho
+iface etho inet static
+address IP_ADDR
+netmask 255.255.255.0
+gateway 192.168.199.1
