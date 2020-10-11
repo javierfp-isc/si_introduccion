@@ -15,7 +15,11 @@ RUN set -x; \
 
 #Creamos el directorio a exportar
 RUN set -x; \
-	mkdir /mnt/nfs
+	mkdir /mnt/nfs && \
+	chmod 777 /mnt/nfs
+
+#Copiamos el archivo de exports
+COPY exports /etc/exports
 
 #Comando para arrancar ssh y entrar en bucle de espera
 ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
