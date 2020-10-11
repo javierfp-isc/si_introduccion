@@ -40,6 +40,13 @@ services:
     ipv4_address: 192.168.199.30
   volumes:
   - /sys/fs/cgroup:/sys/fs/cgroup:ro
+ nfs:
+  build: ./nfs
+  hostname: nfs
+  privileged: true
+  networks:
+   proxmox:
+    ipv4_address: 192.168.199.40
 networks:
   proxmox:
     driver: bridge
