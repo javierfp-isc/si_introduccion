@@ -47,6 +47,8 @@ services:
   networks:
    proxmox:
     ipv4_address: 192.168.199.40
+  volumes:
+  - /nfs:/var/nfs
 networks:
   proxmox:
     driver: bridge
