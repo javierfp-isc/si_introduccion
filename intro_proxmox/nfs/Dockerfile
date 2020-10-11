@@ -20,13 +20,5 @@ RUN set -x; \
 RUN set -x; \
 	echo "root:$PASS" | chpasswd
 
-#Instalamos paquetes de utilidades
-RUN set -x; \
-	apt update && apt install -y vim iputils-ping procps
-
-#Limpiando
-RUN set -x; \
-	apt clean
-
 #Comando para arrancar ssh y entrar en bucle de espera
 ENTRYPOINT ["/usr/bin/entrypoint.sh"]
