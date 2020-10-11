@@ -12,3 +12,10 @@ LABEL acceso="usuario: root, password: abc123."
 #Establecemos la password de root
 RUN set -x; \
 	echo "root:$PASS" | chpasswd
+
+#Creamos el directorio a exportar
+RUN set -x; \
+	mkdir /mnt/nfs
+
+Comando para arrancar ssh y entrar en bucle de espera
+ENTRYPOINT ["/usr/local/bin/entrypoint"]
