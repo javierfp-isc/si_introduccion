@@ -17,5 +17,5 @@ RUN set -x; \
 RUN set -x; \
 	mkdir /mnt/nfs
 
-Comando para arrancar ssh y entrar en bucle de espera
+#Comando para arrancar ssh y entrar en bucle de espera
 ENTRYPOINT ["/usr/local/bin/entrypoint"]
