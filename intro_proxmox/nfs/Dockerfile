@@ -13,10 +13,6 @@ LABEL acceso="usuario: root, password: abc123."
 RUN set -x; \
 	echo "root:$PASS" | chpasswd
 
-#Creamos directorio del export
-RUN set -x; \
-	mkdir /var/nfs
-
 #Copiamos el archivo de exports
 COPY exports /etc/exports
 
