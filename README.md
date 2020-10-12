@@ -19,3 +19,5 @@ En este repositorio disponemos de los escenarios:
 - **intro_procmem**: escenario para ejercicios de gestión de cpu y memoria
 - **intro_commands**: escenario para la tarea de gestión de cpu y memoria
 - **intro_entorno**: escenario para la trabajo con elementos de entorno, tales como escritorios
+- **intro_proxmox**: escenario que simula un nodo de virtualización proxmox
+- **intro_proxmox_cluster**: escenario que simula un clúster de nodos de virtualización proxmox
