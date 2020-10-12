@@ -12,6 +12,9 @@ LABEL descripcion="Imagen Debian para proxmox"
 LABEL paquetes="vim, iputils-ping, nano, procps wget"
 LABEL acceso="usuario: root, password: abc123."
 
+#Copiamos el interfaces al container
+COPY interfaces /etc/network/interfaces
+
 #Copiamos el entrypoint.sh al container
 COPY entrypoint.sh /usr/bin/entrypoint.sh
 
