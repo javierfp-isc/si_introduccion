@@ -4,4 +4,6 @@ services:
  intro1:
   build: ./laboratorio
   hostname: intro1
+  ports:
+   - "8080:80"
   privileged: true
