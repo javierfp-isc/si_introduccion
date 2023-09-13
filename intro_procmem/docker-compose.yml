@@ -6,4 +6,5 @@ services:
   hostname: intro1
   ports:
    - "8080:80"
-  privileged: true
+  cap_add:
+  - ALL

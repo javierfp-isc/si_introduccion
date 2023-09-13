@@ -4,6 +4,7 @@ services:
  entorno1:
   build: ./laboratorio
   hostname: entorno1
-  privileged: true
+  cap_add:
+  - ALL
   ports:
   - "3389:3389"

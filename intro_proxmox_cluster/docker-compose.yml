@@ -4,7 +4,8 @@ services:
  proxmox1:
   build: ./proxmox
   hostname: proxmox1
-  privileged: true
+  cap_add:
+  - ALL
   ports:
   - "8016:8006"
   environment:
@@ -17,7 +18,8 @@ services:
  proxmox2:
   build: ./proxmox
   hostname: proxmox2
-  privileged: true
+  cap_add:
+  - ALL
   ports:
   - "8026:8006"
   environment:
@@ -30,7 +32,8 @@ services:
  proxmox3:
   build: ./proxmox
   hostname: proxmox3
-  privileged: true
+  cap_add:
+  - ALL
   ports:
   - "8036:8006"
   environment:
@@ -43,7 +46,8 @@ services:
  nfs:
   build: ./nfs
   hostname: nfs
-  privileged: true
+  cap_add:
+  - ALL
   networks:
    proxmox:
     ipv4_address: 192.168.199.40

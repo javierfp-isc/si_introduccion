@@ -4,4 +4,5 @@ services:
  intarea:
   build: ./laboratorio
   hostname: intarea
-  privileged: true
+  cap_add:
+  - ALL
